@@ -4,7 +4,7 @@ const Bodies = Matter.Bodies;
 const Constraint = Matter.Constraint;
 
 var engine, world;
-var box1, pig1,pig3;
+var box1, pig1,pig3,score = 0;
 var backgroundImg,platform;
 var ball, slingshot;
 
@@ -43,6 +43,10 @@ function setup(){
 function draw(){
     background(100);
     Engine.update(engine);
+
+    noStroke();
+    textSize(35)
+    text("Score  " + score, width-200, 50);
    
     ground.display();
     ball.display();
@@ -62,6 +66,19 @@ function draw(){
     pig10.display();
     pig11.display(); 
     pig12.display();
+
+    pig1.score(); 
+    pig2.score();
+    pig3.score(); 
+    pig4.score();
+    pig5.score(); 
+    pig6.score();
+    pig7.score(); 
+    pig8.score();
+    pig9.score(); 
+    pig10.score();
+    pig11.score(); 
+    pig12.score();
 }
 
 function mouseDragged(){
